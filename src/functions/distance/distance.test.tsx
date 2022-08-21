@@ -11,29 +11,14 @@ test('Calculates distance correctly', () => {
 		[0, 0],  // velocity
 		[1, 1]   // position
 	); 
-	const p2: PlanetInterface = new planet(
-		20, // mass
-		3,  // radius
-		'rgb(255, 255, 255)',  // color
-		[0, 0],  // velocity
-		[0, 1]   // position
-	); 
+	const p2: PlanetInterface = {...p1};
+	p2.position = [0, 1];
 	expect(distance(p1, p2)).toBe(1)
 	
-	const p3: PlanetInterface = new planet(
-		20, // mass
-		3,  // radius
-		'rgb(255, 255, 255)',  // color
-		[0, 0],  // velocity
-		[-495, 720]   // position
-	); 
-	const p4: PlanetInterface = new planet(
-		20, // mass
-		3,  // radius
-		'rgb(255, 255, 255)',  // color
-		[0, 0],  // velocity
-		[404, -890]   // position
-	);
-	expect(Math.round(distance(p3, p4))).toBe(1844) 
+	const p3 = {...p1}
+	p3.position = [-495, 720]
+	const p4 = {...p1}
+	p4.position = [404, -890];
+	expect(Math.round(distance(p3, p4))).toBe(1844)
 	
 })
