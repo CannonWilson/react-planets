@@ -2,7 +2,29 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+  import planet from './classes/planet'
+  import PlanetInterface from './interfaces/planet';
+  
+  
 function App() {
+  
+  
+  
+  
+  
+    // Test planet creation in App.tsx:
+    const p: PlanetInterface = new planet(
+      20, // mass
+      3,  // radius
+      'rgb(220, 50, 0)',  // color
+      [1, 1],  // velocity
+      [1, 1]   // position
+    ); 
+    
+    console.log('planet', p);
+
+  
   return (
     <div className="App">
       <header className="App-header">
