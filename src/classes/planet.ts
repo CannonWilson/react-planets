@@ -14,9 +14,15 @@ export default class planet implements PlanetInterface {
 		public position: number[],  // [positionX, positionY]
     ) {}
 	
-	// TODO: implement
-	// updatePosition(timeStep: number) {
-	// 	return 0
-	// }
+	updatePositionAndResetForce(timeStep: number) {
+		
+		// Motion equation: s = s0 + (v0 * t) + (0.5 * a * t^2)
+		const deltaX: number = (this.velocity[0] * timeStep) + 0.5 * (this.force[0] / this.mass) * timeStep**2;
+		const deltaY: number = (this.velocity[1] * timeStep) + 0.5 * (this.force[1] / this.mass) * timeStep**2;
+		this.position[0] += deltaX;
+		this.position[1] += deltaY;
+		this.force = [0, 0];
+		
+	}
 
 }

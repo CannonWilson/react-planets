@@ -6,7 +6,9 @@ export default interface PlanetInterface {
 	radius: number;
 	area: number;
 	color: Color;
+	force: number[];
 	velocity: number[];
 	position: number[];
+	updatePositionAndResetForce:(timeStep: number) => void;
 	
 }
