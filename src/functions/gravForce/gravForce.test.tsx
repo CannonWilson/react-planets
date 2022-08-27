@@ -9,7 +9,7 @@ test('Calculates gravitational force', () => {
 	const p1: PlanetInterface = new planet(
 		20, // mass
 		3,  // radius
-		'rgb(255, 255, 255)',  // color
+		[255, 255, 255],  // color
 		[0, 0],  // velocity
 		[1, 1]   // position
 	); 

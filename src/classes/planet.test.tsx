@@ -6,7 +6,7 @@ test('Create and update new planet', () => {
   const p: PlanetInterface = new planet(
     20, // mass
 	3,  // radius
-	'rgb(220, 50, 0)',  // color
+	[220, 50, 0],  // color
 	[1, 1],  // velocity
 	[1, 1]   // position
   ); 
@@ -23,7 +23,7 @@ test('Update position for planet', () => {
 	const p: PlanetInterface = new planet(
 		10, // mass
 		3,  // radius
-		'rgb(220, 50, 0)',  // color
+		[220, 50, 0],  // color
 		[2, 1],  // velocity
 		[0.4, 1]   // position
 	); 

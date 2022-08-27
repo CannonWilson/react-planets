@@ -35,7 +35,7 @@ function App() {
       const newPlanet: PlanetInterface = new planet(
         massMultiplier * Math.random(), // mass
         radiusMultiplier * Math.random(),  // radius
-        `rgb(${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)})`,  // color
+        [Math.round(Math.random() * 255), Math.round(Math.random() * 255), Math.round(Math.random() * 255)],  // color
         [
           velocityMultiplier * (Math.random() * 2 - 1), // multiplier * x in [-1, 1)
           velocityMultiplier * (Math.random() * 2 - 1)
@@ -126,7 +126,7 @@ function App() {
           planets.map((p, pIdx) => 
           <div 
             style={{
-              'backgroundColor': p.color,
+              'backgroundColor': `rgb(${p.color[0]}, ${p.color[1]}, ${p.color[2]})`,
               'width': Math.round(p.radius),
               'height': Math.round(p.radius),
               'left': `${positionToPercent(

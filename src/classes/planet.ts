@@ -1,5 +1,4 @@
 import PlanetInterface from '../interfaces/planet'
-import {Color} from '../types/color'
 
 export default class planet implements PlanetInterface {
 	
@@ -9,7 +8,7 @@ export default class planet implements PlanetInterface {
     constructor (
 		public mass: number,
 		public radius: number,
-		public color: Color,
+		public color: number[],
 		public velocity: number[],  // [velocityX, velocityY]
 		public position: number[],  // [positionX, positionY]
     ) {}

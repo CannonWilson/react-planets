@@ -1,11 +1,9 @@
-import {Color} from '../types/color'
-
 export default interface PlanetInterface {
 	
 	mass: number;
 	radius: number;
 	area: number;
-	color: Color;
+	color: number[];
 	force: number[];
 	velocity: number[];
 	position: number[];
